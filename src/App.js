@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import Profile from './Profile/profile';
 import './App.css';
 
-function App() {
+
+export default function App() {
+  function handlename (Name) {
+    alert('Hello '+ Name)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <>
+      
+      <Profile  
+        fullName="Nader Sdiri"
+        bio="A motivated and enthusiastic recent graduate with a degree in computer science. Possessing quite strong programming skills, along with excellent algorithm skills . 
+        Keen to start a career in web development and eager to bring my passion and knowledge to the role. I am a quick learner, able to work well in a team, and have a strong work ethic. 
+        I am looking for an opportunity to contribute to a dynamic and growing organization and to continue developing my skills." 
+        profession="Future Full-Stack developer"
+        handlename={handlename}
+        imgText="Nader Sdiri future Full-Stack developer "
+      >
+        
+        <img
+        src={"./images/pic.jpg"} alt="brr" className='image' />
+          </Profile>
+      
+    </>
   );
 }
+Profile.defaultProps = {
+  fullName: 'Nad ',
+  bio: '!FOUND',
+  btnShow:true,
+  
+}
 
-export default App;
+
+
